@@ -1,0 +1,938 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #ffffff;
+
+    color: #111111;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    height: 80px;
+
+    padding: 0 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+
+    top: 0;
+
+    background: #ffffff;
+
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #111111;
+
+    text-decoration: none;
+
+}
+
+
+.logo:hover {
+
+    opacity: 0.5;
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+.nav-link {
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    padding: 8px 0;
+
+}
+
+
+.nav-link:hover {
+
+    opacity: 0.5;
+
+}
+
+
+.active-link {
+
+    border-bottom: 1px solid #111111;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 40px;
+
+}
+
+
+.hero-image-container {
+
+    width: min(1000px, 80vw);
+
+    text-align: center;
+
+}
+
+
+#heroImage {
+
+    width: 100%;
+
+    height: 70vh;
+
+    object-fit: contain;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition: opacity 0.7s ease;
+
+}
+
+
+.image-info {
+
+    margin-top: 20px;
+
+}
+
+
+.image-info h1 {
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+    margin-bottom: 8px;
+
+}
+
+
+.image-info p {
+
+    font-size: 13px;
+
+    color: #777777;
+
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.arrow {
+
+    border: none;
+
+    background: none;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    padding: 20px;
+
+}
+
+
+.arrow:hover {
+
+    opacity: 0.4;
+
+}
+
+
+/* =========================
+   ART PAGE
+========================= */
+
+.art-page {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 90px 50px;
+
+}
+
+
+.art-page > h1 {
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.art-intro {
+
+    color: #777777;
+
+    font-size: 14px;
+
+    margin-bottom: 60px;
+
+}
+
+
+/* =========================
+   3 COLUMN GRID
+========================= */
+
+.art-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 60px 30px;
+
+}
+
+
+.art-card {
+
+    text-decoration: none;
+
+    color: #111111;
+
+    display: block;
+
+}
+
+
+.art-card img {
+
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.art-card:hover img {
+
+    opacity: 0.75;
+
+    transform: scale(1.015);
+
+}
+
+
+.art-card h2 {
+
+    font-size: 16px;
+
+    font-weight: normal;
+
+    margin-top: 16px;
+
+}
+
+
+.art-card p {
+
+    font-size: 12px;
+
+    color: #888888;
+
+    margin-top: 7px;
+
+}
+
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 100px 30px;
+
+}
+
+
+.about-content {
+
+    max-width: 750px;
+
+}
+
+
+.about-content h1 {
+
+    text-align: center;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.about-content p {
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: #555555;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================
+   CONTACTS PAGE
+========================= */
+
+.contacts-page {
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 100px 30px;
+
+}
+
+
+.contacts-content {
+
+    width: 100%;
+
+    max-width: 700px;
+
+}
+
+
+.contacts-content h1 {
+
+    text-align: center;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.contact-intro {
+
+    text-align: center;
+
+    color: #666666;
+
+    line-height: 1.8;
+
+    margin-bottom: 60px;
+
+}
+
+
+.contact-list {
+
+    border-top: 1px solid #eeeeee;
+
+}
+
+
+.contact-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.contact-item span {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #888888;
+
+}
+
+
+.contact-item a,
+.contact-item p {
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+
+.contact-item a:hover {
+
+    opacity: 0.5;
+
+}
+
+
+/* =========================
+   ARTWORK PAGE
+========================= */
+
+.artwork-page {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 40px;
+
+}
+
+
+.artwork-main {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+#artworkImage {
+
+    width: min(900px, 80vw);
+
+    height: 70vh;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+.artwork-arrow {
+
+    border: none;
+
+    background: none;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    padding: 20px;
+
+}
+
+
+.artwork-arrow:hover {
+
+    opacity: 0.4;
+
+}
+
+
+/* =========================
+   COUNTER
+========================= */
+
+.image-counter {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: #888888;
+
+}
+
+
+/* =========================
+   THUMBNAILS
+========================= */
+
+.artwork-thumbnails {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.thumbnail {
+
+    width: 90px;
+
+    height: 90px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    opacity: 0.5;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.thumbnail:hover {
+
+    opacity: 0.8;
+
+    transform: scale(1.05);
+
+}
+
+
+.thumbnail.active {
+
+    opacity: 1;
+
+}
+
+
+/* =========================
+   ARTWORK INFORMATION
+========================= */
+
+.artwork-information {
+
+    max-width: 700px;
+
+    margin: 70px auto 100px;
+
+}
+
+
+.artwork-information h1 {
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+}
+
+
+.artwork-description {
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #666666;
+
+    margin-bottom: 30px;
+
+}
+
+
+.artwork-details {
+
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 20px;
+
+}
+
+
+.artwork-details p {
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =========================
+   OTHER WORKS
+========================= */
+
+.other-images {
+
+    margin-top: 80px;
+
+}
+
+
+.other-images h2 {
+
+    font-size: 16px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.gallery-item {
+
+    cursor: pointer;
+
+}
+
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+}
+
+
+.gallery-item h3 {
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    margin-top: 12px;
+
+}
+
+
+.gallery-item p {
+
+    font-size: 12px;
+
+    color: #888888;
+
+    margin-top: 5px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    border-top: 1px solid #eeeeee;
+
+    padding: 30px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #888888;
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .art-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+
+    header {
+
+        height: auto;
+
+        padding: 25px 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    nav {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .nav-link {
+
+        font-size: 10px;
+
+    }
+
+
+    .hero {
+
+        padding: 20px;
+
+        gap: 5px;
+
+    }
+
+
+    #heroImage {
+
+        height: 60vh;
+
+    }
+
+
+    .arrow {
+
+        font-size: 25px;
+
+        padding: 10px;
+
+    }
+
+
+    .art-page {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .art-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .art-card img {
+
+        height: 450px;
+
+    }
+
+
+    .about-page,
+    .contacts-page {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .about-content h1,
+    .contacts-content h1 {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .contact-item {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+
+    .artwork-page {
+
+        padding: 40px 20px;
+
+    }
+
+
+    #artworkImage {
+
+        width: 75vw;
+
+        height: 60vh;
+
+    }
+
+
+    .artwork-arrow {
+
+        font-size: 25px;
+
+        padding: 5px;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
